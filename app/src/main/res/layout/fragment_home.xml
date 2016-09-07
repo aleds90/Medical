@@ -1,0 +1,70 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.estia.medicalapp.fragment.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_thermo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tb_top"
+            android:layout_centerHorizontal="true"
+            android:text="Thermo"
+            />
+
+        <Button
+            android:id="@+id/btn_tensio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_thermo"
+            android:layout_centerHorizontal="true"
+            android:text="tensio"
+            />
+
+        <Button
+            android:id="@+id/btn_oxy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_tensio"
+            android:layout_centerHorizontal="true"
+            android:text="oxy"
+            />
+
+        <Button
+            android:id="@+id/btn_scale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_oxy"
+            android:layout_centerHorizontal="true"
+            android:text="scale"
+            />
+
+        <Button
+            android:id="@+id/btn_gluco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_scale"
+            android:layout_centerHorizontal="true"
+            android:text="gluco"
+            />
+
+        <Button
+            android:id="@+id/btn_ecg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_gluco"
+            android:layout_centerHorizontal="true"
+            android:text="ecg"
+            />
+
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>
