@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86"
+    api-level="23"
+    density="420dpi"
+    format="7"
+    timestamp="14903962320489"
+    token="-6375534977118957056" >
+
+    <task
+        name="javac"
+        duration="447" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="157" />
+    <task
+        name="verifier"
+        duration="39" />
+
+    <artifact
+        location="/Users/estia/Documents/Android/MedicalApp/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="14903962320489" >
+        <artifact
+            location="/Users/estia/Documents/Android/MedicalApp/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

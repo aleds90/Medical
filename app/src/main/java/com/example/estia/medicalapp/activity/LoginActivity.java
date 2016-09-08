@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
      */
 
 
-    // UI references. marco ssupedohvjfmvhj
+    // UI references. marco antani
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
     private View mProgressView;
