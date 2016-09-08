@@ -1,59 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="15dp">
+    >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="I DATI OTTENUTI ALLE ORE 16:43"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:layout_marginBottom="20dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Temperatura attuale: 36°"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:layout_marginBottom="20dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Temperatura nella norma: 37°"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:layout_marginBottom="20dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Il valore di riferimento rientra nella norma"
-        android:textSize="20dp"
-        android:textStyle="bold"/>
-
-    <LinearLayout
-        android:orientation="horizontal"
+    <RelativeLayout
+        android:id="@+id/dialog_title_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/dialog_home"
+        <TextView
+            android:layout_margin="10dp"
+            android:id="@+id/dialog_title"
+            android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="home"/>
+            android:text="Registrazione"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
 
-        <Button
-            android:id="@+id/dialog_ok"
+        <TextView
+            android:layout_below="@id/dialog_title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="vai alle statistiche"/>
-    </LinearLayout>
+            android:layout_height="1dp"
+         />
 
 
+    </RelativeLayout>
 
-</LinearLayout>
+    <RelativeLayout
+        android:layout_below="@id/dialog_title_layout"
+        android:id="@+id/dialog_layout"
+        android:padding="25dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                   />
+
+                <EditText
+                    android:id="@+id/et_registration_visitor_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="La tua email"
+
+                    android:ems="20"/>
+            </TableRow>
+
+            <TableRow
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    android:text="Password"/>
+
+                <EditText
+                    android:id="@+id/et_registration_visitor_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+
+                    android:hint="Scegli una password"/>
+            </TableRow>
+
+            <TableRow
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Nome" />
+
+                <EditText
+                    android:id="@+id/et_registration_visitor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="textPersonName"
+                    android:hint="Il tuo nome" />
+            </TableRow>
+
+            <TableRow
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Cognome" />
+
+                <EditText
+                    android:id="@+id/et_registration_visitor_surname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+
+                    android:hint="Il tuo cognome"/>
+            </TableRow>
+
+            <TableRow
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Competenza" />
+
+                <EditText
+                    android:id="@+id/et_registration_visitor_competence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+
+                    android:hint="(Solo se insegnante)"/>
+
+            </TableRow>
+
+            <TableRow
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    android:text="Citta'" />
+
+                <EditText
+                    android:id="@+id/et_registration_visitor_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+
+                    android:hint="(Solo se insegnante)"/>
+
+            </TableRow>
+
+
+            <TableRow
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    android:text="Indirizzo" />
+
+                <EditText
+                    android:id="@+id/et_registration_visitor_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+
+                    android:hint="(Solo se insegnante)"/>
+
+            </TableRow>
+
+
+        </TableLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
