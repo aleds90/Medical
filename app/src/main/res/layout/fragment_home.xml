@@ -6,65 +6,157 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="15dp">
+
+        <TextView
+            android:id="@+id/divider"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/btn_on_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/round_button"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/holo_green_light"
+            android:text="ON"/>
 
         <Button
             android:id="@+id/btn_thermo"
-            android:layout_width="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_toLeftOf="@id/btn_on_1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tb_top"
             android:layout_centerHorizontal="true"
+            android:background="@drawable/circle_button"
+            android:textColor="@android:color/white"
             android:text="Thermo"
             />
 
         <Button
+            android:id="@+id/btn_on_2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/btn_on_1"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/round_button"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/holo_green_light"
+            android:text="ON"/>
+
+        <Button
             android:id="@+id/btn_tensio"
-            android:layout_width="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_toLeftOf="@id/btn_on_2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/btn_thermo"
             android:layout_centerHorizontal="true"
+            android:background="@drawable/circle_button"
+            android:textColor="@android:color/white"
             android:text="tensio"
             />
 
         <Button
+            android:id="@+id/btn_on_3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/btn_on_2"
+            android:background="@drawable/round_button"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/holo_red_light"
+            android:text="OFF"
+            android:layout_marginTop="15dp"/>
+
+        <Button
             android:id="@+id/btn_oxy"
-            android:layout_width="wrap_content"
+            android:layout_toLeftOf="@id/btn_on_3"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/btn_tensio"
+            android:layout_alignBottom="@id/btn_on_3"
             android:layout_centerHorizontal="true"
+            android:background="@drawable/circle_button"
+            android:textColor="@android:color/white"
             android:text="oxy"
             />
 
         <Button
+            android:id="@+id/btn_on_4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/btn_on_3"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_button"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/holo_red_light"
+            android:text="OFF"/>
+
+        <Button
             android:id="@+id/btn_scale"
-            android:layout_width="wrap_content"
+
+            android:layout_toLeftOf="@id/btn_on_4"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/btn_oxy"
+            android:layout_alignBottom="@id/btn_on_4"
             android:layout_centerHorizontal="true"
+            android:background="@drawable/circle_button"
+            android:textColor="@android:color/white"
             android:text="scale"
             />
+        <Button
+            android:id="@+id/btn_on_5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/btn_on_4"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_button"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/holo_red_light"
+            android:text="OFF"/>
 
         <Button
             android:id="@+id/btn_gluco"
-            android:layout_width="wrap_content"
+            android:layout_toLeftOf="@id/btn_on_5"
+            android:layout_alignBottom="@id/btn_on_5"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/btn_scale"
             android:layout_centerHorizontal="true"
+            android:background="@drawable/circle_button"
+            android:textColor="@android:color/white"
             android:text="gluco"
             />
+        <Button
+            android:id="@+id/btn_on_6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/btn_on_5"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_button"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/holo_red_light"
+            android:text="OFF"/>
 
         <Button
             android:id="@+id/btn_ecg"
-            android:layout_width="wrap_content"
+            android:background="@drawable/circle_button"
+            android:layout_toLeftOf="@id/btn_on_6"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/btn_gluco"
+            android:layout_alignBottom="@id/btn_on_6"
             android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
             android:text="ecg"
             />
 
-
     </RelativeLayout>
-
-
-
 </FrameLayout>

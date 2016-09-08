@@ -11,6 +11,10 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.estia.medicalapp.R;
+import com.example.estia.medicalapp.model.Thermo;
+import com.example.estia.medicalapp.model.ThermoDAO;
+
+import java.util.ArrayList;
 
 /**
  * A login screen that offers login via email/password.
@@ -63,6 +67,27 @@ public class LoginActivity extends AppCompatActivity {
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+
+        //FAKE DATA SAVED
+        ThermoDAO thermoDAO = new ThermoDAO(getApplicationContext());
+        ArrayList<Thermo> thermos = thermoDAO.getThermos();
+        if (thermos.size() < 5 ) {
+            Thermo thermo  = new Thermo(36);
+            Thermo thermo1 = new Thermo(37);
+            Thermo thermo2 = new Thermo(38);
+            Thermo thermo3 = new Thermo(38);
+            Thermo thermo4 = new Thermo(37);
+            Thermo thermo5 = new Thermo(36);
+            Thermo thermo6 = new Thermo(39);
+
+            thermoDAO.save(thermo);
+            thermoDAO.save(thermo1);
+            thermoDAO.save(thermo2);
+            thermoDAO.save(thermo3);
+            thermoDAO.save(thermo4);
+            thermoDAO.save(thermo5);
+            thermoDAO.save(thermo6);
+        }
     }
 
 }

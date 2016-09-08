@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import com.example.estia.medicalapp.R;
 import com.example.estia.medicalapp.model.Thermo;
+import com.example.estia.medicalapp.model.ThermoDAO;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.BarData;
@@ -38,17 +39,16 @@ public class ThermoFragment extends Fragment {
                              Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_thermo, container, false);
 
-        thermos = Thermo.generateThermo();
+        ThermoDAO thermoDAO = new ThermoDAO(getContext());
+        thermos = thermoDAO.getThermos();
 
         LineChart chart = (LineChart) view.findViewById(R.id.chart1);
         chart.setData(generateDataLine(0));
 
-        System.out.println("create");
-
         ListView listView = (ListView) view.findViewById(R.id.listview);
         ArrayList<String> names = new ArrayList<String>();
         names.clear();
-        for(int i = 0; i < 6; i++) {
+        for(int i = 0; i < thermos.size(); i++) {
             names.add(i, "10/10/16 -- Valore Thermo: "+thermos.get(i).getValue());
         }
         ArrayAdapter<String> namesAA = new ArrayAdapter<String>( view.getContext(), android.R.layout.simple_list_item_1, names );
@@ -61,7 +61,7 @@ public class ThermoFragment extends Fragment {
 
         ArrayList<Entry> e1 = new ArrayList<Entry>();
 
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < thermos.size(); i++) {
             e1.add(new Entry(i+1, thermos.get(i).getValue()));
 
         }
@@ -74,7 +74,7 @@ public class ThermoFragment extends Fragment {
 
         ArrayList<Entry> e2 = new ArrayList<Entry>();
 
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < thermos.size(); i++) {
             e2.add(new Entry(i+1, 37));
         }
 

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Thermo {
 
+    private int id;
     private int value;
 
     public Thermo(){}
@@ -37,5 +38,13 @@ public class Thermo {
 
     public void setValue(int value) {
         this.value = value;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

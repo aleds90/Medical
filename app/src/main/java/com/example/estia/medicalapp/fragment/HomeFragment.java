@@ -10,6 +10,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.estia.medicalapp.R;
+import com.example.estia.medicalapp.model.Thermo;
+import com.example.estia.medicalapp.model.ThermoDAO;
+
+import java.util.Random;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
@@ -37,9 +41,12 @@ public class HomeFragment extends Fragment {
         btn_thermo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ThermoDAO thermoDAO = new ThermoDAO(getContext());
+                int value = generateRandom();
+                thermoDAO.save(new Thermo(value));
                 new SweetAlertDialog(view.getContext(), SweetAlertDialog.SUCCESS_TYPE)
                         .setTitleText("Thermo calculated")
-                        .setContentText("Your thermo is: 36.9°")
+                        .setContentText("Your thermo is: "+value+"°")
                         .setCancelText("OK")
                         .showCancelButton(true)
                         .setConfirmText("DETTAGLIO")
@@ -145,4 +152,11 @@ public class HomeFragment extends Fragment {
 
     }
 
+    private int generateRandom(){
+        Random r = new Random();
+        int Low = 35;
+        int High = 40;
+        int Result = r.nextInt(High-Low) + Low;
+        return Result;
+    };
 }
