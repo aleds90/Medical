@@ -22,7 +22,7 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 public class MainActivity extends AppCompatActivity {
 
     ImageButton ib_home, ib_stat, ib_profile, ib_setting;
-    FrameLayout main_fragment;
+    FrameLayout main_frame;
 
 
     @Override
@@ -34,11 +34,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void findViewById() {
-        main_fragment = (FrameLayout)findViewById(R.id.main_fragment);
+        main_frame = (FrameLayout)findViewById(R.id.main_frame);
 
         android.app.Fragment newFragment = new HomeFragment();
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.main_fragment, newFragment);
+        transaction.replace(R.id.main_frame, newFragment);
         transaction.addToBackStack(null);
         transaction.commit();
 
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 ib_setting.setBackground(getResources().getDrawable(R.drawable.ic_settings_white_24dp));
                 android.app.Fragment newFragment = new HomeFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.main_fragment, newFragment);
+                transaction.replace(R.id.main_frame, newFragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
             }
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 ib_setting.setBackground(getResources().getDrawable(R.drawable.ic_settings_white_24dp));
                 android.app.Fragment newFragment = new StatFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.main_fragment, newFragment);
+                transaction.replace(R.id.main_frame, newFragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
 
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 ib_setting.setBackground(getResources().getDrawable(R.drawable.ic_settings_white_24dp));
                 android.app.Fragment newFragment = new ProfileFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.main_fragment, newFragment);
+                transaction.replace(R.id.main_frame, newFragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
             }
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                 ib_setting.setBackground(getResources().getDrawable(R.drawable.ic_settings_black_24dp));
                 android.app.Fragment newFragment = new SettingFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.main_fragment, newFragment);
+                transaction.replace(R.id.main_frame, newFragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
             }
