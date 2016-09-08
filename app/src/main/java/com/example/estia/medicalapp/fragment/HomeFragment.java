@@ -132,9 +132,9 @@ public class HomeFragment extends Fragment {
         final Dialog dialog = new Dialog(getView().getContext());
         dialog.setContentView(R.layout.detail_dialog);
         dialog.setTitle("RESOCONTO");
-        Button dialogButton = (Button) dialog.findViewById(R.id.dialog_home);
+        //Button dialogButton = (Button) dialog.findViewById(R.id.dialog_home);
         // if button is clicked, close the custom dialog
-        dialogButton.setOnClickListener(new View.OnClickListener() {
+        /*dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
@@ -147,7 +147,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
                 dialog.dismiss();
             }
-        });
+        });*/
         dialog.show();
 
     }
