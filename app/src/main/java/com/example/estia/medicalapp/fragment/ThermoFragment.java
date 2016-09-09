@@ -49,7 +49,7 @@ public class ThermoFragment extends Fragment {
         ArrayList<String> names = new ArrayList<String>();
         names.clear();
         for(int i = 0; i < thermos.size(); i++) {
-            names.add(i, "10/10/16 -- Valore Thermo: "+thermos.get(i).getValue());
+            names.add(i, i+"/09/16 | Value: "+thermos.get(i).getValue()+" | Thermometer XFK6");
         }
         ArrayAdapter<String> namesAA = new ArrayAdapter<String>( view.getContext(), android.R.layout.simple_list_item_1, names );
         listView.setAdapter(namesAA);

@@ -2,13 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp">
 
     <RelativeLayout
         android:id="@+id/dialog_title_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent">
 
         <TextView
             android:layout_margin="10dp"
@@ -16,23 +17,22 @@
             android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Registrazione"
+            android:text="Detail relevation"
             android:textStyle="bold"
+            android:textColor="@android:color/white"
             android:textSize="20dp"/>
 
         <TextView
             android:layout_below="@id/dialog_title"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-         />
-
+            android:layout_height="1dp"/>
 
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_below="@id/dialog_title_layout"
         android:id="@+id/dialog_layout"
-        android:padding="25dp"
+        android:padding="20dp"
         android:layout_centerHorizontal="true"
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -50,16 +50,17 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Email"
-                   />
+                    android:text="Date" />
 
                 <EditText
                     android:id="@+id/et_registration_visitor_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:hint="La tua email"
-
+                    android:text="19-11-2016"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:clickable="false"
                     android:ems="20"/>
             </TableRow>
 
@@ -71,17 +72,16 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-
-                    android:text="Password"/>
+                    android:text="Hour"/>
 
                 <EditText
                     android:id="@+id/et_registration_visitor_password"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-
-                    android:hint="Scegli una password"/>
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:clickable="false"
+                    android:text="15:40"/>
             </TableRow>
 
             <TableRow
@@ -92,16 +92,17 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-                    android:text="Nome" />
+                    android:text="Device" />
 
                 <EditText
                     android:id="@+id/et_registration_visitor_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:clickable="false"
                     android:inputType="textPersonName"
-                    android:hint="Il tuo nome" />
+                    android:text="Thermometer XFKI543"/>
             </TableRow>
 
             <TableRow
@@ -113,88 +114,45 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:text="Cognome" />
+                    android:text="Thermo" />
 
                 <EditText
                     android:id="@+id/et_registration_visitor_surname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
-
-                    android:hint="Il tuo cognome"/>
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:clickable="false"
+                    android:hint="36°"/>
             </TableRow>
-
-            <TableRow
-                android:paddingBottom="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:text="Competenza" />
-
-                <EditText
-                    android:id="@+id/et_registration_visitor_competence"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-
-                    android:hint="(Solo se insegnante)"/>
-
-            </TableRow>
-
-            <TableRow
-                android:paddingBottom="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-
-                    android:text="Citta'" />
-
-                <EditText
-                    android:id="@+id/et_registration_visitor_city"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-
-                    android:hint="(Solo se insegnante)"/>
-
-            </TableRow>
-
-
-            <TableRow
-                android:paddingBottom="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-
-                    android:text="Indirizzo" />
-
-                <EditText
-                    android:id="@+id/et_registration_visitor_address"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-
-                    android:hint="(Solo se insegnante)"/>
-
-            </TableRow>
-
 
         </TableLayout>
 
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@id/dialog_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageButton
+            android:layout_marginRight="15dp"
+            android:id="@+id/run_to_stat"
+            android:background="@drawable/round_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/ic_trending_up_white_24dp" />
+
+        <Button
+            android:text="Back to home"
+            android:background="@drawable/circle_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/run_to_stat"
+            android:layout_marginLeft="15dp"
+            android:textColor="@android:color/white"/>
 
     </RelativeLayout>
-
-
 </RelativeLayout>

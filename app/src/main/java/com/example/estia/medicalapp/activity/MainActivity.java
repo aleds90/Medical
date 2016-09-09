@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.estia.medicalapp.R;
 import com.example.estia.medicalapp.fragment.AllStatsFragment;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageButton ib_home, ib_stat, ib_profile, ib_setting;
     FrameLayout main_frame;
+    TextView main_title;
 
 
     @Override
@@ -49,9 +51,12 @@ public class MainActivity extends AppCompatActivity {
         ib_profile  = (ImageButton)findViewById(R.id.ib_profile);
         ib_setting  = (ImageButton)findViewById(R.id.ib_setting);
 
+        main_title = (TextView)findViewById(R.id.main_title);
+
         ib_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                main_title.setText("Home");
                 ib_home.setBackground(getResources().getDrawable(R.drawable.ic_home_black_24dp));
                 ib_stat.setBackground(getResources().getDrawable(R.drawable.ic_trending_up_white_24dp));
                 ib_profile.setBackground(getResources().getDrawable(R.drawable.ic_person_white_24dp));
@@ -66,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         ib_stat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                main_title.setText("Statistics");
                 ib_home.setBackground(getResources().getDrawable(R.drawable.ic_home_white_24dp));
                 ib_stat.setBackground(getResources().getDrawable(R.drawable.ic_trending_up_black_24dp));
                 ib_profile.setBackground(getResources().getDrawable(R.drawable.ic_person_white_24dp));
@@ -82,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
         ib_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                main_title.setText("Profile");
                 ib_home.setBackground(getResources().getDrawable(R.drawable.ic_home_white_24dp));
                 ib_stat.setBackground(getResources().getDrawable(R.drawable.ic_trending_up_white_24dp));
                 ib_profile.setBackground(getResources().getDrawable(R.drawable.ic_person_black_24dp));
@@ -97,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
         ib_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                main_title.setText("Settings");
                 ib_home.setBackground(getResources().getDrawable(R.drawable.ic_home_white_24dp));
                 ib_stat.setBackground(getResources().getDrawable(R.drawable.ic_trending_up_white_24dp));
                 ib_profile.setBackground(getResources().getDrawable(R.drawable.ic_person_white_24dp));
